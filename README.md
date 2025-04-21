@@ -9,8 +9,15 @@ We propose CRAVE (Conflicting Reasoning Approach for explainable claim VErificat
 ## Dataset Preparation
 To prepare the claims and corpus for HOVER, run the following command:
 
-'''bash prepare_hover_data.sh'''
+```
+bash prepare_hover_data.sh
+```
 
 To prepare the claims and corpus for Feverous, run the following command:
+```
+bash prepare_feverous_data.sh
+```
+The claims and the indexed corpus will be saved in ./[DATASET]/claims and ./[DATASET]/corpus folder. The corpus will be used for ambiguity elimination.
 
-'bash prepare_feverous_data.sh'
+## Ambiguity-Elimination Enhanced Evidence Retrieval
+
