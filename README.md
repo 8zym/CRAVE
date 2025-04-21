@@ -6,3 +6,11 @@ We propose CRAVE (Conflicting Reasoning Approach for explainable claim VErificat
 
 ![model](https://github.com/user-attachments/assets/12de91a2-1643-4b22-939b-a7839f008bf2)
 
+## Dataset Preparation
+To prepare the claims and corpus for HOVER, run the following command:
+
+'bash prepare_hover_data.sh'
+
+To prepare the claims and corpus for Feverous, run the following command:
+
+'bash prepare_feverous_data.sh'
