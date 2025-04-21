@@ -1,0 +1,6 @@
+data/train/gold/ft_data.jsonl filter=lfs diff=lfs merge=lfs -text
+data/train/gold/ft_data_train.json filter=lfs diff=lfs merge=lfs -text
+data/train/open/feverous-gpt-3.5-turbo_rationale_-1_V2.0_processed.json filter=lfs diff=lfs merge=lfs -text
+data/train/open/hover-gpt-3.5-turbo_rationale_-1_V2.0_processed.json filter=lfs diff=lfs merge=lfs -text
+data/** filter=lfs diff=lfs merge=lfs -text
+data/ filter=lfs diff=lfs merge=lfs -text
