@@ -19,5 +19,63 @@ bash prepare_feverous_data.sh
 ```
 The claims and the indexed corpus will be saved in ./[DATASET]/claims and ./[DATASET]/corpus folder. The corpus will be used for ambiguity elimination.
 
+## Run Local Wikipedia Server
+If you cannot access Wikipedia directly, you can run local Wikipedia Server.
+
+To run local Wikipedia server, download wikipedia_en_all_maxi_2024-01.zim from https://www.mirrorservice.org/sites/download.kiwix.org/zim/wikipedia/
+
+Run the following command:
+```
+python ./test_evidence/server.py
+```
+
 ## Ambiguity-Elimination Enhanced Evidence Retrieval
+To generate ambiguity elimination plan, run the following commands :
+```
+python ./test_evidence/decompose.py
+```
+
+To continue Ambiguity Elimination and Entity Retrieval, run the following command:
+```
+python ./test_evidence/ambiguity_elimination.py 
+```
+
+To continue Evidence Retrieval and Selection, run the following command:
+```
+python ./test_evidence/evidence.py
+```
+You can view the output of each procedure in ./[DATASET_NAME]. Also, you can appoint specific args according to args.py or change the prompts in prompt.py.
+
+## Conflicting Perspective Reasoning and Preliminary Judgment Module with LLMs
+Run the following command for reasoning through LLM:
+```
+python ./test_rationale/main.py
+```
+
+You can also directly access the accuracy of LLMs output by running
+```
+python ./test_rationale/accuracy.py
+```
+
+## Judge Module with Small LM
+You can train your own Small Language Model using the files under ./SLM 
+```
+bash ./SLM/ft.sh
+```
+
+## Evaluation
+You can evaluate the pretrained SLM by running the following commands:
+```
+python ./SLM/test.py
+```
+
+The result of different training methods for using gpt-3.5-turbo as LLM:
+![image](https://github.com/user-attachments/assets/ad7ca572-e514-4761-80ff-fee5164dd0cb)
+
+## Q&A
+If you are interested in our pretrained model checkpoint or encouter any problem, please either directly contact us or leave an issue in the github repo.
+
+
+
+
 
